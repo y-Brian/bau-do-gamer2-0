@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baú do Gamer - descubra jogos gratuitos e ofertas para gamers.">
+    <link rel="icon" href="/img/Logótipo Neon Baú do Gamer.png" type="image/x-icon">
+    <title>Baú do Gamer</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header id="inicio">
+
+        <div class="logo">
+            <h1>🎮 Baú do Gamer</h1>
+        </div>
+
+        <!-- MENU MOBILE -->
+        <button class="menuMobile" id="menuMobile"
+            aria-label="Abrir menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <!-- NAVEGAÇÃO -->
+        <nav id="menu">
+            <ul>
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#jogos">Jogos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato">Suporte</a></li>
+            </ul>
+        </nav>
+
+        <!-- PESQUISA E TEMA -->
+        <div class="usuario">
+
+            <input input type="search" id="pesquisa"
+                placeholder="Pesquisar jogos...">
+
+            <button id="tema" class="btnTema"
+                aria-label="Alternar modo claro e escuro">
+                🌙
+            </button>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- DESTAQUE PRINCIPAL -->
+        <section class="destaque">
+
+            <div class="texto-destaque">
+
+                <span>SEU PRÓXIMO JOGO ESTÁ AQUI</span>
+
+                <h2>O universo gamer sem gastar nada!</h2>
+
+                <p>
+                    Descubra jogos gratuitos, aproveite oportunidades
+                    e encontre sua próxima aventura.
+                </p>
+
+                <a href="#jogos" class="btnPrincipal">
+                    Explorar jogos
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- SOBRE -->
+        <section class="sobre" id="sobre">
+
+            <h2>Sobre o Baú do Gamer</h2>
+
+            <p>
+                O Baú do Gamer é uma plataforma criada para reunir
+                oportunidades de jogos gratuitos em um só lugar.
+                Nosso objetivo é ajudar os jogadores a descobrir
+                novas aventuras sem precisar gastar dinheiro.
+            </p>
+
+        </section>
+
+        <!-- JOGOS DA API -->
+        <section class="jogos" id="jogos">
+
+            <h2>🔥 Jogos gratuitos</h2>
+
+            <p>
+                Confira as oportunidades disponíveis no momento.
+            </p>
+
+            
+
+            <div class="barraPesquisa">
+
+                <input type="search" id="filtroJogos"
+                    placeholder="Digite o nome de um jogo...">
+
+                <button id="buscarJogos">   
+                    Buscar
+                </button>
+
+            </div>
+
+            <p id="carregando" class="mensagem">
+                Carregando jogos...
+            </p>
+
+            <p id="erro" class="mensagem erro"></p>
+
+            <div class="lista-jogos" id="listaJogos">
+
+                <!-- OS JOGOS SERÃO INSERIDOS PELO JAVASCRIPT -->
+
+            </div>
+
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+
+            <h2>❓ Perguntas frequentes</h2>
+
+            <div class="pergunta">
+
+                <button class="perguntaTitulo">
+                    Os jogos são realmente gratuitos?
+                    <span>+</span>
+                </button>
+
+                <div class="resposta">
+                    <p>
+                        Sim! A proposta é apresentar jogos e
+                        oportunidades gratuitas. Algumas ofertas
+                        possuem prazo para resgate.
+                    </p>
+                </div>
+
+            </div>
+
+            
+
+            <div class="pergunta">
+
+                <button class="perguntaTitulo">
+                    Como consigo os jogos?
+                    <span>+</span>
+                </button>
+
+                <div class="resposta">
+                    <p>
+                        Basta clicar no botão de cada jogo para
+                        acessar a página da oferta e verificar
+                        as instruções de resgate.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pergunta">
+
+                <button class="perguntaTitulo">
+                    Preciso criar uma conta?
+                    <span>+</span>
+                </button>
+
+                <div class="resposta">
+                    <p>
+                        Isso depende da plataforma responsável
+                        pela distribuição do jogo.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTATO -->
+        <section class="contato" id="contato">
+
+            <h2>📩 Entre em contato</h2>
+
+            <p>
+                Tem alguma dúvida ou sugestão?
+                Envie uma mensagem para nossa equipe!
+            </p>
+
+            <form id="formContato">
+
+                <label for="nome">Nome:</label>
+
+                <input type="text" id="nome"
+                    placeholder="Digite seu nome" required>
+
+                <label for="email">E-mail:</label>
+
+                <input type="email" id="email"
+                    placeholder="Digite seu e-mail" required>
+
+                <label for="mensagem">Mensagem:</label>
+
+                <textarea id="mensagem" rows="5"
+                    placeholder="Escreva sua mensagem..."
+                    required></textarea>
+
+                <button type="submit">
+                    Enviar mensagem
+                </button>
+
+                <p id="avisoFormulario"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- MODAL DOS JOGOS -->
+    <div class="modalImagem" id="modal">
+
+        <div class="modalConteudo">
+
+            <button id="fecharModal"
+                aria-label="Fechar modal">
+                ✕
+            </button>
+
+            <img id="imagemModal" src="" alt="">
+
+            <h2 id="tituloModal"></h2>
+
+            <p id="descricaoModal"></p>
+
+            <p id="plataformaModal"></p>
+
+            <a id="linkModal" href="#"
+                target="_blank" rel="noopener noreferrer">
+                Acessar jogo
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- VOLTAR AO TOPO -->
+    <button id="voltarTopo" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            © 2026 Baú do Gamer - Todos os direitos reservados.
+        </p>
+
+        <p>
+            Desenvolvido pela equipe Baú do Gamer.
+        </p>
+
+        <a href="https://github.com/y-Brian"
+            target="_blank" rel="noopener noreferrer">
+            <strong>GitHub</strong> - y-Brian
+        </a>
+
+         <a href="https://github.com/Fabricio-blx"
+            target="_blank" rel="noopener noreferrer">
+            <strong>GitHub</strong> - Fabricio-blx
+        </a>
+
+        <p class="creditoApi">
+            Dados de jogos e ofertas:
+            <a href="https://www.gamerpower.com/"
+                target="_blank" rel="noopener noreferrer">
+                GamerPower
+            </a>
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
