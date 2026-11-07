@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+section {
+    padding: 60px 8%;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+button, input, textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+/* =====================================
+   MODO CLARO
+===================================== */
+
+body.light {
+    background: #cbd3e0;
+    color: #ffffff;
+}
+
+body.light header,
+body.light .card-jogo,
+body.light .sobre,
+body.light .faq,
+body.light .contato {
+    background: #eeeeee;
+    color: #000000;
+}
+
+body.light .resposta {
+    background: #e9eef7;
+    color: #172033;
+}
+
+body.light .perguntaTitulo {
+    color: #ffffff;
+}
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #17243a;
+    gap: 20px;
+}
+
+.logo h1 {
+    color: #42a5f5;
+    font-size: 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body.light nav a {
+    color: #172033;
+}
+
+nav a:hover {
+    color: #42a5f5;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.usuario input,
+.barraPesquisa input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.btnTema {
+    padding: 10px;
+    border-radius: 50%;
+    background: #263b59;
+    color: white;
+    font-size: 18px;
+}
+
+.menuMobile {
+    display: none;
+    background: #1565c0;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+/* =====================================
+   DESTAQUE
+===================================== */
+
+.destaque {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    background: url("/img/Estande\ Gamer\ Neon\ com\ Baú\ Roxo.png");
+}
+
+.texto-destaque {
+    max-width: 600px;
+}
+
+.texto-destaque span {
+    color: #42a5f5;
+    font-weight: bold;
+}
+
+.texto-destaque h2 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.texto-destaque p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.btnPrincipal {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 8px;
+    background: #1565c0;
+    color: white;
+    text-decoration: none;
+}
+
+.btnPrincipal:hover {
+    background: #2196f3;
+}
+
+/* =====================================
+   SOBRE
+===================================== */
+
+.sobre {
+    background: #17243a;
+    border-radius: 12px;
+    margin: 30px 8%;
+}
+
+.sobre p {
+    line-height: 1.8;
+    max-width: 850px;
+}
+
+/* =====================================
+   JOGOS
+===================================== */
+
+.jogos {
+    text-align: center;
+
+background: url("/img/Coletania\ -\ desfocada.webp");
+}
+
+
+.barraPesquisa {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.barraPesquisa input {
+    width: 300px;
+    max-width: 100%;
+}
+
+.barraPesquisa button,
+.contato button,
+.modalConteudo a {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #1565c0;
+    color: white;
+    text-decoration: none;
+}
+
+.barraPesquisa button:hover,
+.contato button:hover,
+.modalConteudo a:hover {
+    background: #2196f3;
+}
+
+.lista-jogos {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card-jogo {
+    background: #17243a;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: left;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card-jogo:hover {
+    transform: translateY(-6px);
+}
+
+.card-jogo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-jogo h3 {
+    margin: 15px 0 10px;
+}
+
+.card-jogo p {
+    color: #b8c5d8;
+    line-height: 1.5;
+}
+
+.card-jogo .preco {
+    color: #4caf50;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.card-jogo button {
+    width: 100%;
+    padding: 12px;
+    background: #1565c0;
+    color: white;
+    border-radius: 8px;
+}
+
+.card-jogo button:hover {
+    background: #2196f3;
+}
+
+.mensagem {
+    margin: 15px 0;
+}
+
+.erro {
+    color: #ff5252;
+}
+
+
+
+/* =====================================
+   FAQ
+===================================== */
+
+.faq {
+    background: #17243a;
+    border-radius: 12px;
+    margin: 30px 8%;
+}
+
+.pergunta {
+    margin-bottom: 12px;
+}
+
+.perguntaTitulo {
+    width: 100%;
+    padding: 16px;
+    background: #263b59;
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.resposta {
+    display: none;
+    padding: 15px;
+    background: #203149;
+    line-height: 1.6;
+    border-radius: 0 0 8px 8px;
+}
+
+.pergunta.ativo .resposta {
+    display: block;
+}
+
+/* =====================================
+   CONTATO
+===================================== */
+
+.contato {
+    background: #17243a;
+    border-radius: 12px;
+    margin: 30px 8%;
+    text-align: center;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin: 25px auto 0;
+    text-align: left;
+    gap: 10px;
+}
+
+.contato input,
+.contato textarea {
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+.contato textarea {
+    resize: vertical;
+}
+
+.contato button {
+    margin-top: 10px;
+}
+
+#avisoFormulario {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* =====================================
+   MODAL
+===================================== */
+
+.modalImagem {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1200;
+}
+
+.modalImagem.ativo {
+    display: flex;
+}
+
+.modalConteudo {
+    position: relative;
+    background: #17243a;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.modalConteudo img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.modalConteudo p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.modalConteudo a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#fecharModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e53935;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* =====================================
+   VOLTAR AO TOPO
+===================================== */
+
+#voltarTopo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background: #1565c0;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 500;
+}
+
+#voltarTopo.ativo {
+    display: block;
+}
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+footer {
+    background: #0a101c;
+    padding: 30px;
+    text-align: center;
+    line-height: 2;
+}
+
+footer a {
+    color: #42a5f5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menuMobile {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.ativo {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .usuario {
+        width: 100%;
+    }
+
+    .usuario input {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .texto-destaque h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    section {
+        padding: 40px 5%;
+    }
+
+    .sobre,
+    .faq,
+    .contato {
+        margin: 20px 5%;
+    }
+
+    .destaque {
+        min-height: 350px;
+    }
+
+    .texto-destaque h2 {
+        font-size: 28px;
+    }
+
+    .barraPesquisa {
+        flex-direction: column;
+    }
+
+    .barraPesquisa input {
+        width: 100%;
+    }
+
+    .lista-jogos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1280px) {
+    .card-jogo {
+        width: 100%;
+        padding: 30px 3%
+    }
+}
